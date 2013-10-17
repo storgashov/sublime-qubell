@@ -1,3 +1,8 @@
 Qubell plugin for sublime text
 
+To configure qubell plugin got to Sublime Text -> Preferences -> Settings - User and set the qubell_host property:
+{
+	"qubell_host": "http://localhost:9000"
+}
+
 Sublime text 3 package instalation: https://sublime.wbond.net/installation#st3

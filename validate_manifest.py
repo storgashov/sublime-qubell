@@ -29,7 +29,7 @@ class ValidateManifestCall(threading.Thread):
 class ValidateCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		manifest = self.view.substr(sublime.Region(0, self.view.size())).encode('UTF-8')
-		thread = ValidateManifestCall('http://localhost:9000',manifest, 5)
+		thread = ValidateManifestCall(self.view.settings().get('qubell_host','http://localhost:9000'),manifest, 5)
 		thread.start()
 
 def handle_threads(self, edit, threads, braces, offset=0, i=0, dir=1):  
